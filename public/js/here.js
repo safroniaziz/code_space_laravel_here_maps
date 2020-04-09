@@ -1,7 +1,7 @@
-if (navigator.geoLocation) {
-    navigator.geoLocation.getCurrentPosition(position   =>  {
-        localCoord  =   position.coords;
-        objLocalCord    =   {
+if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(position   =>  {
+        localCoord  = position.coords;
+        objLocalCoord    =   {
             lat :   localCoord.latitude,
             long :   localCoord.longitude,
         }
@@ -20,7 +20,7 @@ if (navigator.geoLocation) {
                 defaultLayers.vector.normal.map,
                 {
                     zoom: 13,
-                    center: objLocalCord,
+                    center: objLocalCoord,
                     pixelRatio: window.devicePixelRatio || 1
                 });
                 window.addEventListener('resize', ()    =>  map.getViewPort().resize());
