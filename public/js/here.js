@@ -26,7 +26,7 @@ if (navigator.geolocation) {
                 window.addEventListener('resize', ()    =>  map.getViewPort().resize());
 
         let ui = H.ui.UI.createDefault(map, defaultLayers);
-        let mapEvents = new H.mapevents.mapEvents(map);
+        let mapEvents = new H.mapevents.MapEvents(map);
         let behavior = new H.mapevents.Behavior(mapEvents);
     })
 } else {
